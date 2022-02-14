@@ -1,5 +1,14 @@
 import { useState } from 'react';
 
+async function ProcurarCep(props) {
+    const cep = props.texto;
+    const url = `https://viacep.com.br/ws/${cep}/json`;
+    const dados = await fetch(url);
+    const endereco = await dados.json();
+    console.log(endereco)
+}
+
+
 function CapsLock(props) {
     const textoInserido = props.texto;
     const textCapsLock = textoInserido.toUpperCase();
