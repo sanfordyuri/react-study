@@ -1,12 +1,5 @@
 import { useState } from 'react';
 
-async function ProcurarCep(props) {
-    const cep = props.texto;
-    const url = `https://viacep.com.br/ws/${cep}/json`;
-    const dados = await fetch(url);
-    const endereco = await dados.json();
-    console.log(endereco)
-}
 
 
 function CapsLock(props) {
@@ -88,8 +81,34 @@ function Contador() {
 
 }
 
+function CustomForm() {
+
+    function pegarCep() {
+       const cep = document.getElementById('cep').value();
+       console.log(cep)
+    }
+
+    return (
+        <form>
+        <label>
+            CEP 
+            <input type="text" name="cep"/>
+        </label>
+        <label>
+            BAIRRO 
+            <input type="text" name="bairro"/>
+        </label>
+        <button onClick={pegarCep}>Pesquisar</button>
+        </form>
+    )
+}
+
 function Home() {
-    return <Contador />
+    return (
+        <div>
+            <CustomForm />
+        </div>
+    )
 }
 
 export default Home
