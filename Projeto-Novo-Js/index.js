@@ -1,14 +1,23 @@
 class Cliente {
     nome;
     cpf;
-    agencia;
-    saldo;
 }
 
-const cliente1 = new Cliente();
-cliente1.nome = "Yuri";
-cliente1.cpf = "00000001111";
-cliente1.agencia = "1001";
-cliente1.saldo = "1000000"
+class ContaCorrente {
+    agencia;
+    saldo;
 
-console.log(cliente1)
+    sacar(valor) {
+        if(valor > 0) {
+            if(this.saldo >= valor) {
+                this.saldo -= valor;
+            }
+        }
+    }
+
+    depositar(valor) {
+        if(valor > 0) {
+            this.saldo += valor;
+        }
+    }
+}
