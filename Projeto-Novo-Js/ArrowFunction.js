@@ -1,5 +1,11 @@
-const nomesAlunos = ['Yuri', 'Pedrin', 'Mikaell', 'Flavin', 'Babau']
+import fetch from "node-fetch";
 
-nomesAlunos.forEach((nomes) => {
-    console.log(`${nomes}`)
-}) 
+
+async function endereco(cep) {
+    const url = `https://viacep.com.br/ws/${cep}/json/`
+    const data = await fetch(url)
+    const datajson = await data.json()
+    console.log(datajson.bairro)
+}
+
+endereco('60713030')
