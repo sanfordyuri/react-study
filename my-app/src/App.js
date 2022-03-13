@@ -3,6 +3,7 @@ import Clock from "./components/Clock";
 import ContadorComponent from "./components/ContadorComponent";
 import BuscadorDeCepComponent from "./components/BuscadorDeCepComponent";
 import LoginControl from "./components/LoginControl";
+import SelectComponent from "./components/SelectComponent";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <ContadorComponent />
         <BuscadorDeCepComponent />
         <LoginControl />
+        <SelectComponent lista={["teste", "teste2", "teste3"]} />
       </center>
     </div>
   );
