@@ -20,17 +20,22 @@ class BuscarCepComponent extends Component {
 
     render() {
         return(
-            <form
-                onSubmit={this.PesquisarCep.bind(this)} 
-                className="form-cep">
-                <input 
-                    type="text"
-                    placeholder="Insira o seu Cep"
-                    className="form-cep_input"
-                    onChange={ this.handleMudancaCep.bind(this) }
-                />
-                <button className="form-cep_input form-cep_submit">Pesquisar</button>
-            </form>
+            <section className="section-cep">
+                <form
+                    onSubmit={this.PesquisarCep.bind(this)} 
+                    className="form-cep">
+                    <input 
+                        type="text"
+                        placeholder="Insira o seu Cep"
+                        className="form-cep_input"
+                        onChange={ this.handleMudancaCep.bind(this) }
+                    />
+                    <button className="form-cep_input form-cep_submit">Pesquisar</button>            
+                </form>
+                <div>
+                    <textarea/>
+                </div>                
+            </section>
         )
     }
 

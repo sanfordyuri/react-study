@@ -30,7 +30,6 @@ export default class BuscarCep extends Component {
         bairro: result.bairro,
         cidade: result.localidade
     });
-
   }
 
   render() {

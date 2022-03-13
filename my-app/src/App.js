@@ -2,6 +2,7 @@ import WelcomeComponent from "./components/WelcomeComponent";
 import Clock from "./components/Clock";
 import ContadorComponent from "./components/ContadorComponent";
 import BuscadorDeCepComponent from "./components/BuscadorDeCepComponent";
+import LoginControl from "./components/LoginControl";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Clock />
         <ContadorComponent />
         <BuscadorDeCepComponent />
+        <LoginControl />
       </center>
     </div>
   );
