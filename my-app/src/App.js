@@ -5,6 +5,7 @@ import BuscadorDeCepComponent from "./components/BuscadorDeCepComponent";
 import LoginControl from "./components/LoginControl";
 import SelectComponent from "./components/SelectComponent";
 import CounterComponentHook from "./components/CounterHook";
+import HookEdited from "./components/HookEdited";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <LoginControl />
         <SelectComponent lista={["teste", "teste2", "teste3"]} />
         <CounterComponentHook />
+        <HookEdited />
       </center>
     </div>
   );
