@@ -6,19 +6,21 @@ import LoginControl from "./components/LoginControl";
 import SelectComponent from "./components/SelectComponent";
 import CounterComponentHook from "./components/CounterHook";
 import HookEdited from "./components/HookEdited";
+import Mask from "./components/Mask";
 
 function App() {
   return (
     <div className="App">
       <center>
-        <WelcomeComponent name="Yuri" />
+{/*         <WelcomeComponent name="Yuri" />
         <Clock />
         <ContadorComponent />
         <BuscadorDeCepComponent />
         <LoginControl />
         <SelectComponent lista={["teste", "teste2", "teste3"]} />
         <CounterComponentHook />
-        <HookEdited />
+        <HookEdited /> */}
+        <Mask type="CPF"/>
       </center>
     </div>
   );
