@@ -1,5 +1,7 @@
 import React from "react";
 
+
+// MASK CPF => O usuário precisa digitar, achar uma forma de formatar para todos os casos. 
 export default function Mask(props) {
   let lastWord = "";
 
@@ -20,7 +22,7 @@ export default function Mask(props) {
         e.target.value = lastWord + "-" + lastChar;
       } else {
         if (e.target.value.length < 11) {
-          if(lastWord.slice(-1) != ".") {
+          if (lastWord.slice(-1) != ".") {
             if (lastWord.length !== 0 && countChar(lastWord) % 3 === 0) {
               let lastChar = e.target.value.slice(-1);
               e.target.value = lastWord + "." + lastChar;
