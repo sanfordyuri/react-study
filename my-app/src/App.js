@@ -20,6 +20,7 @@ function App() {
         <SelectComponent lista={["teste", "teste2", "teste3"]} />
         <CounterComponentHook />
         <HookEdited /> */}
+        CPF:
         <Mask type="CPF"/>
       </center>
     </div>

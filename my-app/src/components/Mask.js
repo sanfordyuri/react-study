@@ -1,7 +1,6 @@
 import React from "react";
 
-
-// MASK CPF => O usuário precisa digitar, achar uma forma de formatar para todos os casos. 
+// MASK CPF => O usuário precisa digitar, achar uma forma de formatar para todos os casos.
 export default function Mask(props) {
   let lastWord = "";
 
@@ -12,19 +11,19 @@ export default function Mask(props) {
   };
 
   const handleChangeInputCpf = (e) => {
-    //Expected: 231.002.999-00
-    if (lastWord.length > e.target.value.length) {
-    } else {
-      if (e.target.value.length === 11) {
+    const limitForNextBeHifen = 11;
+    const limitForNextBeHifenButWhenErase = 12;
+    const isErasing = lastWord.length > e.target.value.length;
+    let lastChar = e.target.value.slice(-1);
+    if (!isErasing) {
+      if (e.target.value.length === limitForNextBeHifen) {
         e.target.value += "-";
-      } else if (e.target.value.length === 12) {
-        let lastChar = e.target.value.slice(-1);
+      } else if (e.target.value.length === limitForNextBeHifenButWhenErase) {
         e.target.value = lastWord + "-" + lastChar;
       } else {
-        if (e.target.value.length < 11) {
-          if (lastWord.slice(-1) != ".") {
+        if (e.target.value.length < limitForNextBeHifen) {
+          if (lastChar !== ".") {
             if (lastWord.length !== 0 && countChar(lastWord) % 3 === 0) {
-              let lastChar = e.target.value.slice(-1);
               e.target.value = lastWord + "." + lastChar;
             }
           }
